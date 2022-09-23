@@ -1,3 +1,11 @@
+import Search from "./components/search/search";
 export default function App() {
-  return <div className="App"></div>;
+  const handleSearchChange = (searchValue) => {
+    console.log(searchValue);
+  };
+  return (
+    <div className="Container">
+      <Search onSearchChange={handleSearchChange} />
+    </div>
+  );
 }
