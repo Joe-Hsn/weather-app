@@ -6,6 +6,7 @@ import {
   forecastUrl,
 } from "./Api";
 import { useState } from "react";
+import Forecast from "./components/forecast/forecast";
 export default function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
@@ -36,14 +37,19 @@ export default function App() {
   };
   return (
     <div className="container min-h-screen w-screen mx-auto p-6">
+      <div className="text-[2rem] sm:text-[3rem] w-full text-center mb-4">
+        Weather App
+      </div>
       <Search onSearchChange={handleSearchChange} className="mb-8" />
       {currentWeather ? (
         <CurrentState data={currentWeather} />
       ) : (
-        <div className="w-full bg-cyan-600 text-white h-10 flex items-center justify-center mt-6 rounded">
+        <div className="w-full bg-cyan-600 text-white h-16 flex flex-col items-center justify-center mt-6 rounded">
           try your location ☝
+          <div className="text-cyan-300">Your data will be displayed here</div>
         </div>
       )}
+      {forecast ? <Forecast data={forecast} /> : null}
     </div>
   );
 }
