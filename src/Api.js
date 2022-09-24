@@ -6,3 +6,8 @@ export const geoAPIOptions = {
   },
 };
 export const geoAPIUrl = "https://wft-geo-db.p.rapidapi.com/v1/geo";
+
+export const currentWeatherState =
+  "https://api.openweathermap.org/data/2.5/weather";
+export const currentWeatherStateApiKey = "2bf2822a0e545bd5ad0e1d8199df6ba4";
+export const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
