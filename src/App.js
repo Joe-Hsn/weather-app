@@ -32,8 +32,6 @@ export default function App() {
       .catch((err) => {
         console.log(err);
       });
-    console.log(currentWeather);
-    console.log(forecast);
   };
   return (
     <div className="container min-h-screen w-screen mx-auto p-6">
